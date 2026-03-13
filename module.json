@@ -1,0 +1,43 @@
+{
+  "id": "docs",
+  "slug": "docs",
+  "name": "Docs",
+  "namespace": "modula.docs",
+  "version": "1.0.0",
+  "package_kind": "module",
+  "class": "surface",
+  "placements": ["sidebar", "standalone_page"],
+  "entry_points": {
+    "frontend": "frontend/routes/+page.svelte",
+    "backend": "backend/router.py"
+  },
+  "surfaces": [
+    {
+      "type": "sidebar_page",
+      "id": "docs-home",
+      "title": "Docs",
+      "route": "/docs"
+    },
+    {
+      "type": "standalone_page",
+      "id": "docs-standalone",
+      "title": "Docs",
+      "route": "/docs"
+    }
+  ],
+  "widgets": [],
+  "permissions": [],
+  "capabilities_provided": [
+    "docs.read",
+    "docs.navigation",
+    "docs.guides"
+  ],
+  "capabilities_required": [],
+  "capabilities_optional": [],
+  "compatibility": {
+    "modula_core": ">=1.0.0",
+    "api_version": "1"
+  },
+  "update_channel": "stable",
+  "hooks": {}
+}

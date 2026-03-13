@@ -1,0 +1,27 @@
+{
+  "id": "docs",
+  "name": "Docs",
+  "subtitle": "Documentation and guides for Modula",
+  "description": "A documentation surface for Modula modules, plugins, Board, Marketplace, and developer workflows.",
+  "category": "core",
+  "tags": ["docs", "guides", "developer", "help"],
+  "author": "Modula",
+  "publisher": "modula-mod",
+  "pricing": {
+    "model": "free"
+  },
+  "support": {
+    "docs": "./docs"
+  },
+  "assets": {
+    "icon": "icon.svg"
+  },
+  "release": {
+    "current": "1.0.0",
+    "channel": "stable"
+  },
+  "compatibility": {
+    "modula_core": ">=1.0.0",
+    "api_version": "1"
+  }
+}
