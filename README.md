@@ -16,3 +16,15 @@ It is intended to expose:
 
 - Sidebar page: `/docs`
 - Standalone page: `/docs`
+
+## Source Of Truth
+
+Docs is maintained in GitHub as the editable source of truth.
+
+Deployment flow:
+
+- GitHub repo
+- GitHub release artifact
+- Marketplace submission/update
+- Modula runtime refresh
+- live surfaces update

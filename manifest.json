@@ -17,7 +17,7 @@
     "icon": "icon.svg"
   },
   "release": {
-    "current": "1.0.1",
+    "current": "1.0.2",
     "channel": "stable"
   },
   "compatibility": {

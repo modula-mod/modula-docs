@@ -3,10 +3,13 @@
   "slug": "docs",
   "name": "Docs",
   "namespace": "modula.docs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "package_kind": "module",
   "class": "surface",
-  "placements": ["sidebar", "standalone_page"],
+  "placements": [
+    "sidebar",
+    "standalone_page"
+  ],
   "runtime": "sandbox",
   "runtime_renderer": "docs_host",
   "bundle_entry": "index.html",
@@ -41,11 +44,51 @@
   "permissions": [],
   "capabilities_provided": [
     "docs.read",
+    "docs.search",
     "docs.navigation",
     "docs.guides"
   ],
   "capabilities_required": [],
   "capabilities_optional": [],
+  "actions_provided": [
+    {
+      "id": "docs.search.query",
+      "title": "Search Docs",
+      "capability": "docs.search"
+    }
+  ],
+  "triggers_emitted": [
+    {
+      "id": "docs.search.requested",
+      "title": "Docs Search Requested"
+    }
+  ],
+  "jobs_provided": [
+    {
+      "id": "docs.index.rebuild",
+      "title": "Rebuild Docs Index",
+      "schedule_supported": true
+    }
+  ],
+  "workflows_provided": [
+    {
+      "id": "docs.search.assist",
+      "title": "Docs Search Assist",
+      "steps": [
+        "docs.search.query"
+      ]
+    }
+  ],
+  "agent_roles": [
+    {
+      "id": "docs.assistant",
+      "title": "Docs Assistant",
+      "capabilities": [
+        "docs.read",
+        "docs.search"
+      ]
+    }
+  ],
   "compatibility": {
     "modula_core": ">=1.0.0",
     "api_version": "1"
